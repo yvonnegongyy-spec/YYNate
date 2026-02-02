@@ -1,0 +1,8 @@
+
+{
+  "name": "Poker AI & Game Locator",
+  "description": "A comprehensive poker utility app featuring a game locator, bankroll tracker, and real-time AI strategy coach.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

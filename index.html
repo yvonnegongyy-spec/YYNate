@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Poker AI & Game Locator</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#19b399",
+                        "primary-alt": "#e36d77",
+                        "accent-lime": "#BDFC13",
+                        "background-light": "#f1f2f4",
+                        "background-dark": "#101418",
+                        "surface-dark": "#161b22",
+                        "card-dark": "#22282F",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "Manrope", "sans-serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Epilogue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .map-gradient-overlay {
+            background: linear-gradient(0deg, #101418 0%, rgba(16, 20, 24, 0) 25%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .glass-panel {
+            background: rgba(22, 27, 34, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .glow-line {
+            filter: drop-shadow(0 0 4px #19b399);
+        }
+        .bento-card {
+            background: linear-gradient(145deg, #22282F 0%, #1a1f26 100%);
+        }
+        .glow-effect {
+            box-shadow: 0 0 40px 10px rgba(227, 109, 119, 0.15);
+        }
+        .icon-glow {
+            filter: drop-shadow(0 0 12px rgba(227, 109, 119, 0.4));
+        }
+        @keyframes ping-slow {
+            0% { transform: scale(1); opacity: 1; }
+            75%, 100% { transform: scale(2); opacity: 0; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
