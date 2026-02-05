@@ -6,7 +6,7 @@ const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || '' }
 export const getStrategyAdvice = async (handDetails: string) => {
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-3-flash-preview',
+      model: 'gemini-1.5-pro',
       contents: `You are an expert poker strategy coach (GTO oriented). Analyze the following hand or situation and provide concise, actionable advice: ${handDetails}`,
       config: {
         systemInstruction: "You are a professional poker coach. Keep answers punchy, strategic, and focused on GTO principles. Use markdown formatting.",
